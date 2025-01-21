@@ -303,10 +303,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 30px;
     }
 
-    #yil {
-        width: 100%;
-    }
-
+    #yil,
     #texnolog {
         width: 100%;
     }
@@ -339,3 +336,205 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* work end */
+
+/* skills start */
+
+.skills {
+    padding-top: 20px;
+    padding-bottom: 4px;
+}
+
+.skills-title {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.05px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.skills-text {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    text-align: center;
+    color: #D2D2D2;
+    margin-bottom: 30px;
+}
+
+.skills-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skills-col {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.skills-input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 3px;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.skills-input[type="checkbox"]:checked {
+    background: white;
+}
+
+.skills-input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+}
+
+.skills-col-text {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #EBEBEB;
+}
+
+@media(max-width:705px) {
+    .skills-title {
+        font-size: 20px;
+        line-height: 19.36px;
+    }
+
+    .skills-text {
+        font-size: 18px;
+        line-height: 16.94px;
+        margin-bottom: 20px;
+    }
+
+    .skills-row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:375px) {
+    .skills-title {
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+
+    .skills-text {
+        font-size: 14px;
+        line-height: 16.94px;
+        margin-bottom: 20px;
+    }
+
+    .skills-row {
+        grid-template-columns: 1fr;
+        gap: 16.5px;
+    }
+
+    .skills-col {
+        gap: 10px;
+        align-items: center;
+    }
+
+    .skills-input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+    }
+
+    .skills-col-text {
+        font-size: 14px;
+        line-height: 16.94px;
+    }
+}
+
+/* skills end */
+
+/*  financial start*/
+
+.financial {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.financial-title {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.05px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.financial-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.financial-col-text {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.financial-input {
+    height: 51px;
+    padding-left: 15px;
+    max-width: 385px;
+    background: #88888833;
+    backdrop-filter: blur(20px);
+    border: none;
+    border-radius: 8px;
+    padding-top: 11px;
+    padding-bottom: 10px;
+}
+
+.financial-input::placeholder {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #EBEBEB;
+    word-spacing: 0px;
+}
+
+@media(max-width:400px) {
+    .financial-title {
+        font-size: 16px;
+        line-height: 19.36px;
+        margin-bottom: 20px;
+    }
+
+    .financial-col-text {
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+
+    .financial-input {
+        max-width: 335px;
+        height: 40px;
+    }
+
+    .financial-input::placeholder {
+        font-size: 14px;
+        line-height: 19.6px;
+    }
+}
+
+/* financial end */
