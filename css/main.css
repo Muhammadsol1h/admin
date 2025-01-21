@@ -1,0 +1,341 @@
+/* font family start */
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Gothic&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* font family end */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-image: url(../img/wrapper/wrapper.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+}
+
+.wrap {
+    max-width: 766px;
+    margin: 0 auto;
+    background: rgba(67, 67, 67, 0.2);
+    backdrop-filter: blur(20px)
+}
+
+/* header start */
+
+.header {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.header-container {
+    max-width: 686px;
+    margin: 0 auto;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 686px;
+}
+
+.header-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.header-logo {
+    display: flex;
+    object-fit: cover;
+}
+
+.header-title {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #FFFFFF;
+    max-width: 363px;
+}
+
+.header-text {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: center;
+    color: #CECECE;
+}
+
+@media(max-width:463px) {
+
+    .header-title {
+        font-size: 18px;
+        line-height: 22.4px;
+    }
+
+    .header-text {
+        font-size: 16px;
+        line-height: 19.6px;
+    }
+}
+
+@media(max-width:375px) {
+    .wrapper {
+        padding: 0;
+    }
+
+    .wrap {
+        padding: 0px 20px;
+    }
+
+    .header-row {
+        margin-bottom: 10px;
+        align-items: center;
+    }
+
+    .header-title {
+        font-size: 16px;
+        line-height: 22.4px;
+        max-width: 242px;
+    }
+
+    .header-text {
+        font-size: 14px;
+        line-height: 19.6px;
+        max-width: 335px;
+    }
+}
+
+/* header end */
+
+/* personal start */
+
+.personal {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.personal-title {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.05px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.personal-from {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.personal-from-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.personal-from-col-text {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.personal-from-col-input {
+    background: #84848433;
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    border: none;
+    padding-top: 13px;
+    padding-bottom: 11px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 51px;
+}
+
+.personal-from-col-input::placeholder,
+#sana {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: #EBEBEB;
+}
+
+input[type="date"] {
+    color: #EBEBEB;
+    background-color: #84848433;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.personal-from-col-active {
+    width: 868px;
+}
+
+@media(max-width:640px) {
+    .personal-title {
+        font-size: 20px;
+        line-height: 19.36px;
+    }
+
+    .personal-from {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .personal-from-col-input.active {
+        height: auto;
+        padding-bottom: 38px;
+    }
+
+    .personal-from-col-input::placeholder,
+    #sana {
+        font-size: 18px;
+        line-height: 16.94px;
+        text-wrap: wrap;
+    }
+}
+
+@media(max-width:375px) {
+    .personal-from-col {
+        max-width: 335px;
+    }
+
+    #sana {
+        max-width: 154px;
+    }
+
+    .personal-from-col-input::placeholder,
+    #sana {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+/* personal end */
+
+
+/* work start */
+
+.work {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.work-title {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.05px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.work-from {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.work-from-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.work-from-col-text {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#yil {
+    width: 227px;
+}
+
+#texnolog {
+    width: 444px;
+}
+
+.work-from-col-input {
+    border-radius: 8px;
+    border: none;
+    background: #88888833;
+    backdrop-filter: blur(20px);
+    height: 51px;
+    padding-left: 15px;
+    align-items: center;
+}
+
+.work-from-col-input::placeholder {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #EBEBEB;
+}
+
+@media(max-width:710px) {
+    .work-from {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #yil {
+        width: 100%;
+    }
+
+    #texnolog {
+        width: 100%;
+    }
+}
+
+@media(max-width:375px) {
+    .work-from {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .work-from-col-text {
+        font-size: 16px;
+        line-height: 19.36px;
+        margin-bottom: 10px;
+    }
+
+    .work-from-col {
+        gap: 5px;
+    }
+
+    .work-from-col-input::placeholder {
+        font-size: 14px;
+        line-height: 16.94px;
+    }
+
+    #yil {
+        width: 160px;
+    }
+}
+
+/* work end */
