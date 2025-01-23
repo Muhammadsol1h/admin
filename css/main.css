@@ -24,6 +24,13 @@
     backdrop-filter: blur(20px);
 }
 
+@media(max-width:800px) {
+    .wrap{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 /* header start */
 
 .header {
@@ -195,10 +202,15 @@
     max-width: 100%;
     color: #EBEBEB;
     text-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .personal-from-col-input1::placeholder {
     color: #EBEBEB;
+    display: flex;
+    align-items: center;
 }
 
 .personal-from-col-input::placeholder,
@@ -252,8 +264,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .personal-from-col-input1 {
-        padding-top: 10px;
-        padding-bottom: 30px;
+        padding-top: 15px;
+        padding-bottom: 40px;
         padding-left: 15px;
         padding-right: 15px;
         height: 41px;
@@ -397,7 +409,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 5px;
     }
 
-    .work-from-col-input{
+    .work-from-col-input {
         height: 40px;
         padding-top: -5px;
     }
@@ -875,6 +887,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         line-height: 16.94px;
         margin-bottom: 20px;
     }
+
+    .additiional-area {
+        font-size: 14px;
+        line-height: 19.6px;
+    }
+
+    .additiional-area::placeholder {
+        color: #EBEBEB;
+    }
 }
 
 /* contact end */
@@ -883,17 +904,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* modal start */
 
 .modal {
+    background-color: black;
     background-image: url(../img/modal/banner.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    padding-top: 80px;
     display: none;
-}
-
-.modalActive{
-    left: 0;
 }
 
 .modal-container {
@@ -910,7 +929,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     backdrop-filter: blur(20px);
     border-radius: 20px;
     padding: 50px 0px;
-    margin-top: 80px;
 }
 
 .modal-logo {
@@ -985,9 +1003,65 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding-bottom: 12px;
     border: none;
     color: #0F0F0F;
+    height: 60px;
 }
 
+@media(max-width:660px) {
+    .modal {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
+    .modal-form {
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media(max-width:375px) {
+    .modal-container {
+        max-width: 335px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 27.32px;
+    }
+
+    .modal-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+    }
+
+    .modal-form {
+        max-width: 304px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modal-col-text {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+    }
+
+    .modal-col-input {
+        height: 40px;
+    }
+
+    .modal-form-btn {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        height: 40px;
+    }
+
+}
 
 .modal-box {
     max-width: 640px;
@@ -996,7 +1070,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding-left: 20px;
     padding-right: 20px;
     padding: 50px 0px;
-    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1004,7 +1077,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background: #88888826;
     backdrop-filter: blur(20px);
     border-radius: 20px;
-    margin-top: 12%;
+    margin-top: 8%;
+    display: none;
 }
 
 .modal-box-icon {
