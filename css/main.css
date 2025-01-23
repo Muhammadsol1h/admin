@@ -841,6 +841,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     overflow: auto;
     border-radius: 8px;
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 .additiional-area::placeholder {
