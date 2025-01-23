@@ -57,7 +57,7 @@
                     <div class="personal-from-col">
                         <label for="manzil" class="personal-from-col-text">Yashash manzili</label>
                         <input type="text" placeholder="Namangan viloyati, Chust tumani, Gulzor ko’chasi 55-uy "
-                            class="personal-from-col-input active">
+                            class="personal-from-col-input1" id="manzil">
                     </div>
                 </div>
             </section>
@@ -90,28 +90,29 @@
                     <p class="skills-text">Quyidagi sohalar bo‘yicha tajribangiz bor-yo‘qligini belgilang:</p>
                     <div class="skills-row">
                         <div class="skills-col">
-                            <input type="checkbox" class="skills-input">
-                            <label for="" class="skills-col-text">CHPU rovershik</label>
+                            <input type="checkbox" id="chpu" class="skills-input">
+                            <label for="chpu" class="skills-col-text">CHPU rovershik</label>
                         </div>
                         <div class="skills-col">
-                            <input type="checkbox" class="skills-input">
-                            <label for="" class="skills-col-text">Universal (ikki yo‘nalishda ishlay oladigan)</label>
+                            <input type="checkbox" id="universal" class="skills-input">
+                            <label for="universal" class="skills-col-text">Universal (ikki yo‘nalishda ishlay
+                                oladigan)</label>
                         </div>
                         <div class="skills-col">
-                            <input type="checkbox" class="skills-input">
-                            <label for="" class="skills-col-text">Ustanovshik (o‘rnatish ishlari)</label>
+                            <input type="checkbox" id="ornatish" class="skills-input">
+                            <label for="ornatish" class="skills-col-text">Ustanovshik (o‘rnatish ishlari)</label>
                         </div>
                         <div class="skills-col">
-                            <input type="checkbox" class="skills-input">
-                            <label for="" class="skills-col-text">Texnolog</label>
+                            <input type="checkbox" id="tex" class="skills-input">
+                            <label for="tex" class="skills-col-text">Texnolog</label>
                         </div>
                         <div class="skills-col">
-                            <input type="checkbox" class="skills-input">
-                            <label for="" class="skills-col-text">Sborka ishlari</label>
+                            <input type="checkbox" id="sborka" class="skills-input">
+                            <label for="sborka" class="skills-col-text">Sborka ishlari</label>
                         </div>
                         <div class="skills-col">
-                            <input type="checkbox" class="skills-input">
-                            <label for="" class="skills-col-text">Boshqa</label>
+                            <input type="checkbox" id="boshqa" class="skills-input">
+                            <label for="boshqa" class="skills-col-text">Boshqa</label>
                         </div>
                     </div>
                 </div>
@@ -122,9 +123,12 @@
             <section class="financial">
                 <div class="financial-container container">
                     <h2 class="financial-title">4. MOLIYAVIY KUTILMALAR</h2>
-                    <div class="financial-col">
+                    <div class="financial-row">
                         <label for="oylik" class="financial-col-text">Kutilayotgan oylik maosh miqdori (so‘m):</label>
-                        <input type="number" id="oylik" placeholder="5 000 000" class="financial-input">
+                        <div class="financial-col">
+                            <input type="number" id="oylik" placeholder="5 000 000" class="financial-input">
+                            <p class="financial-col-title">so‘m</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -136,12 +140,16 @@
                     <h2 class="contact-title">5. BOG‘LANISH MA’LUMOTLARI</h2>
                     <div class="contact-row">
                         <div class="contact-col">
-                            <label for="" class="contact-text">Telefon raqami</label>
-                            <input type="number" placeholder="+998 91 123 45 67" class="contact-input">
+                            <label for="tel" class="contact-text">Telefon raqami</label>
+                            <input type="number" id="tel" placeholder="+998 91 123 45 67" class="contact-input">
                         </div>
                         <div class="contact-col">
-                            <label for="" class="contact-text">Telegram akkaunti</label>
-                            <input type="url" placeholder="@Shaxriyor_singer" class="contact-input">
+                            <label for="accaut" class="contact-text">Telegram akkaunti</label>
+                            <div class="contact-col-box">
+                                <input id="accaut" type="url" placeholder="@Shaxriyor_singer" class="contact-input1">
+                                <img src="./img/contact/Calendar.svg" alt=" contact calendar icon"
+                                    class="contact-col-box-icon">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -157,14 +165,43 @@
                     <textarea class="additiional-area" name="" id=""
                         placeholder="Men o‘z sohamda yuqori natijalarga erishishga intiladigan, mehnatkash va mas’uliyatli insonman. Jamoada ishlash qobiliyatiga ega bo‘lib, murakkab muammolarni hal qilishda ijodiy yondashuvni afzal ko‘raman. Yangi texnologiyalarni o‘rganishga qiziqaman va o‘z malakamni doimiy ravishda oshirishni maqsad qilganman. Bo‘sh vaqtimda professional kitoblar o‘qish va o‘z soham bo‘yicha seminar-treninglarda qatnashishni yoqtiraman."></textarea>
 
-                    <button class="additiional-btn">
+                    <button class="additiional-btn" id="yuborish">
                         Yuborish
                     </button>
                 </div>
             </section>
             <!-- additiional end -->
         </div>
+
         <!-- wrap end -->
+
+        <!-- modal start -->
+        <section class="modal" id="modal">
+            <div class="modal-container conatainer" id="modalLogin">
+                <img src="./img/header/logo.svg" alt="modal logo" class="modal-logo">
+                <h2 class="modal-title">Xush kelibsiz!</h2>
+                <p class="modal-text">Shaxsiy sahifangizga kirish uchun <br> login parolongizmi kiriting.</p>
+                <form action="" class="modal-form">
+                    <div class="modal-form-col">
+                        <label for="login" class="modal-col-text">Login</label>
+                        <input type="email" id="login" class="modal-col-input">
+                    </div>
+                    <div class="modal-form-col">
+                        <label for="parol" class="modal-col-text">Parol</label>
+                        <input type="password" id="parol" class="modal-col-input">
+                    </div>
+                    <button class="modal-form-btn" id="kirish">Kirish</button>
+                </form>
+            </div>
+            <div class="modal-box" id="modalBox">
+                <img src="./img/modal/layer.svg" alt="modal-box icon" class="modal-box-icon">
+                <h2 class="modal-box-title">
+                    Ajoyib!
+                </h2>
+                <p class="modal-box-text">Barcha ma’lumotlaringiz <br> muvaffaqqiyatli yuborildi.</p>
+                <a href="#" class="modal-box-link">Bosh sahifaga o‘tish</a>
+            </div>
+        </section>
     </div>
     <!-- wrappper end -->
 </body>
